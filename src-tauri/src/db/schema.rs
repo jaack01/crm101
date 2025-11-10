@@ -203,15 +203,15 @@ pub fn insert_default_services(conn: &Connection) -> Result<()> {
         return Ok(());
     }
 
-    // Insert default services
+    // Insert default services (prices in INR)
     let services = vec![
-        ("wash-shirt", "Wash", "Shirt", 30.0),
-        ("wash-pants", "Wash", "Pants", 40.0),
-        ("wash-dress", "Wash", "Dress", 50.0),
-        ("dryclean-shirt", "Dry Clean", "Shirt", 80.0),
-        ("dryclean-suit", "Dry Clean", "Suit", 200.0),
-        ("iron-shirt", "Iron", "Shirt", 15.0),
-        ("iron-pants", "Iron", "Pants", 20.0),
+        ("wash-shirt", "Wash", "Shirt", 50.0),
+        ("wash-pants", "Wash", "Pants", 60.0),
+        ("wash-dress", "Wash", "Dress", 100.0),
+        ("dryclean-shirt", "Dry Clean", "Shirt", 150.0),
+        ("dryclean-suit", "Dry Clean", "Suit", 500.0),
+        ("iron-shirt", "Iron", "Shirt", 25.0),
+        ("iron-pants", "Iron", "Pants", 30.0),
     ];
 
     for (id, category, name, price) in services {
@@ -244,7 +244,7 @@ pub fn insert_default_settings(conn: &Connection) -> Result<()> {
         ("shop_phone", ""),
         ("shop_email", ""),
         ("shop_address", ""),
-        ("currency", "USD"),
+        ("currency", "INR"),
         ("tax_rate", "0"),
         ("order_prefix", "ORD"),
     ];

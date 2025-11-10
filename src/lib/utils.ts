@@ -12,10 +12,12 @@ export function cn(...inputs: ClassValue[]) {
 /**
  * Format currency
  */
-export function formatCurrency(amount: number, currency: string = 'USD'): string {
-  return new Intl.NumberFormat('en-US', {
+export function formatCurrency(amount: number, currency: string = 'INR'): string {
+  return new Intl.NumberFormat('en-IN', {
     style: 'currency',
     currency,
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2,
   }).format(amount)
 }
 
