@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import { Toaster } from 'react-hot-toast'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Providers } from '@/components/Providers'
 
 export const metadata: Metadata = {
   title: 'Laundry CRM - Professional Laundry Management System',
@@ -17,8 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
+      <body className="font-sans antialiased">
+        <Providers>
+          {children}
+        </Providers>
         <Toaster position="top-right" />
       </body>
     </html>

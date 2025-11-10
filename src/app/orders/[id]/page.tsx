@@ -1,5 +1,7 @@
 'use client'
 
+export const dynamicParams = false
+
 import { useEffect, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
@@ -527,3 +529,5 @@ export default function OrderDetailPage() {
     </ProtectedRoute>
   )
 }
+
+

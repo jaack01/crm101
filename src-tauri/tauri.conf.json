@@ -8,7 +8,11 @@
   },
   "package": {
     "productName": "Laundry CRM",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "authors": ["Laundry CRM Team"],
+    "copyright": "Copyright © 2025 Laundry CRM. All rights reserved.",
+    "shortDescription": "Professional CRM application for laundry businesses",
+    "longDescription": "A comprehensive customer relationship management system designed specifically for laundry shops. Features include customer management, order processing, inventory tracking, payment management, and business analytics."
   },
   "tauri": {
     "allowlist": {

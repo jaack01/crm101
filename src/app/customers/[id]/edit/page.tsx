@@ -1,5 +1,7 @@
 'use client'
 
+export const dynamicParams = false
+
 import { useEffect, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { ArrowLeft, Save } from 'lucide-react'
@@ -204,3 +206,5 @@ export default function EditCustomerPage() {
     </ProtectedRoute>
   )
 }
+
+
