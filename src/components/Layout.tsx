@@ -14,6 +14,7 @@ import {
   LogOut,
   Menu,
   X,
+  Shield,
 } from 'lucide-react'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
@@ -29,6 +30,7 @@ const navigation = [
   { name: 'Inventory', href: '/inventory', icon: Package },
   { name: 'Payments', href: '/billing', icon: DollarSign },
   { name: 'Reports', href: '/reports', icon: FileText },
+  { name: 'Staff', href: '/staff', icon: Shield },
   { name: 'Settings', href: '/settings', icon: Settings },
 ]
 

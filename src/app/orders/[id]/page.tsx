@@ -25,6 +25,7 @@ import ProtectedRoute from '@/components/ProtectedRoute'
 import Layout from '@/components/Layout'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
+import { PrintInvoice } from '@/components/PrintInvoice'
 import { orderApi, customerApi, paymentApi } from '@/lib/tauri'
 import type { Order, Customer, Payment, PaymentMethod } from '@/lib/types'
 import toast from 'react-hot-toast'
@@ -138,9 +139,6 @@ function OrderDetailContent() {
     }
   }
 
-  const handlePrint = () => {
-    window.print()
-  }
 
   if (loading) {
     return (
@@ -186,10 +184,7 @@ function OrderDetailContent() {
             </div>
           </div>
           <div className="flex gap-2">
-            <Button variant="outline" onClick={handlePrint}>
-              <Printer className="w-4 h-4 mr-2" />
-              Print
-            </Button>
+            <PrintInvoice order={order} customer={customer} />
             <Button variant="danger" onClick={handleDeleteOrder}>
               <Trash2 className="w-4 h-4 mr-2" />
               Delete
