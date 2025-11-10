@@ -15,9 +15,11 @@ import {
   Menu,
   X,
   Shield,
+  Activity,
 } from 'lucide-react'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
+import { NotificationCenter } from './NotificationCenter'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -30,6 +32,7 @@ const navigation = [
   { name: 'Inventory', href: '/inventory', icon: Package },
   { name: 'Payments', href: '/billing', icon: DollarSign },
   { name: 'Reports', href: '/reports', icon: FileText },
+  { name: 'Activity', href: '/activity', icon: Activity },
   { name: 'Staff', href: '/staff', icon: Shield },
   { name: 'Settings', href: '/settings', icon: Settings },
 ]
@@ -139,7 +142,12 @@ export default function Layout({ children }: LayoutProps) {
             <Menu className="w-6 h-6" />
           </button>
           <span className="text-lg font-semibold text-gray-900">Laundry CRM</span>
-          <div className="w-6" /> {/* Spacer for alignment */}
+          <NotificationCenter />
+        </div>
+
+        {/* Desktop header */}
+        <div className="hidden lg:flex sticky top-0 z-10 items-center justify-end h-16 px-8 bg-white border-b">
+          <NotificationCenter />
         </div>
 
         {/* Page content */}
