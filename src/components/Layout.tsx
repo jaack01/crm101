@@ -17,6 +17,7 @@ import {
   Shield,
   Activity,
   Zap,
+  Award,
 } from 'lucide-react'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
@@ -33,6 +34,7 @@ const navigation = [
   { name: 'Inventory', href: '/inventory', icon: Package },
   { name: 'Payments', href: '/billing', icon: DollarSign },
   { name: 'Reports', href: '/reports', icon: FileText },
+  { name: 'Loyalty', href: '/loyalty', icon: Award },
   { name: 'Activity', href: '/activity', icon: Activity },
   { name: 'Automation', href: '/automation', icon: Zap },
   { name: 'Staff', href: '/staff', icon: Shield },
