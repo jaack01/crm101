@@ -18,6 +18,7 @@ import {
   Activity,
   Zap,
   Award,
+  MessageSquare,
 } from 'lucide-react'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
@@ -35,6 +36,7 @@ const navigation = [
   { name: 'Payments', href: '/billing', icon: DollarSign },
   { name: 'Reports', href: '/reports', icon: FileText },
   { name: 'Loyalty', href: '/loyalty', icon: Award },
+  { name: 'Communications', href: '/communications', icon: MessageSquare },
   { name: 'Activity', href: '/activity', icon: Activity },
   { name: 'Automation', href: '/automation', icon: Zap },
   { name: 'Staff', href: '/staff', icon: Shield },
